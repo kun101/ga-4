@@ -3,26 +3,26 @@
 const results = [];
 
 document.querySelectorAll('li.ipc-metadata-list-summary-item').forEach((item, index) => {
-  if (index >= 25) return;
+    if (index >= 25) return;
 
     console.log(item.querySelector('.ipc-rating-star--rating'))
 
-  // Title & IMDb ID
-  const link = item.querySelector('a.ipc-title-link-wrapper');
-  const href = link?.getAttribute('href') || '';
-  const id = href.match(/tt\d+/)?.[0] || '';
-  const title = link?.innerText.trim();
+    // Title & IMDb ID
+    const link = item.querySelector('a.ipc-title-link-wrapper');
+    const href = link?.getAttribute('href') || '';
+    const id = href.match(/tt\d+/)?.[0] || '';
+    const title = link?.innerText.trim();
 
-  // Year
-  const yearSpan = item.querySelector('.sc-dc48a950-8');
-  const year = yearSpan?.textContent.match(/\d{4}/)?.[0];
+    // Year
+    const yearSpan = item.querySelector('.sc-dc48a950-8');
+    const year = yearSpan?.textContent.match(/\d{4}/)?.[0];
 
-  // Rating
-  const rating = item.querySelector('.ipc-rating-star--rating').innerHTML;
+    // Rating
+    const rating = item.querySelector('.ipc-rating-star--rating').innerHTML;
 
-  if (id && title && year && rating) {
-    results.push({ id, title, year, rating });
-  }
+    if (id && title && year && rating) {
+        results.push({ id, title, year, rating });
+    }
 });
 
 console.log(results)
@@ -32,154 +32,154 @@ copy(results)
 ANSWER:
 [
     {
-        "id": "tt6208148",
-        "title": "1. Snow White",
+        "id": "tt36240772",
+        "title": "1. K.O.",
         "year": "2025",
-        "rating": "2.0"
+        "rating": "5.8"
+    },
+    {
+        "id": "tt35396529",
+        "title": "2. Mountainhead",
+        "year": "2025",
+        "rating": "5.4"
+    },
+    {
+        "id": "tt27075958",
+        "title": "3. Fountain of Youth",
+        "year": "2025",
+        "rating": "5.7"
+    },
+    {
+        "id": "tt27757546",
+        "title": "4. Diablo",
+        "year": "2025",
+        "rating": "5.6"
+    },
+    {
+        "id": "tt23060698",
+        "title": "5. Clown in a Cornfield",
+        "year": "2025",
+        "rating": "5.7"
+    },
+    {
+        "id": "tt27812086",
+        "title": "6. Cleaner",
+        "year": "2025",
+        "rating": "5.1"
+    },
+    {
+        "id": "tt21815562",
+        "title": "7. The Alto Knights",
+        "year": "2025",
+        "rating": "5.8"
+    },
+    {
+        "id": "tt14513804",
+        "title": "8. Captain America: Brave New World",
+        "year": "2025",
+        "rating": "5.7"
+    },
+    {
+        "id": "tt31176520",
+        "title": "9. Eddington",
+        "year": "2025",
+        "rating": "5.9"
+    },
+    {
+        "id": "tt3566834",
+        "title": "10. A Minecraft Movie",
+        "year": "2025",
+        "rating": "5.7"
+    },
+    {
+        "id": "tt35630700",
+        "title": "11. Our Times",
+        "year": "2025",
+        "rating": "5.3"
+    },
+    {
+        "id": "tt30955489",
+        "title": "12. Until Dawn",
+        "year": "2025",
+        "rating": "5.8"
+    },
+    {
+        "id": "tt9150192",
+        "title": "13. A Working Man",
+        "year": "2025",
+        "rating": "5.7"
+    },
+    {
+        "id": "tt14123284",
+        "title": "14. Havoc",
+        "year": "2025",
+        "rating": "5.7"
     },
     {
         "id": "tt9104736",
-        "title": "2. Housefull 5",
+        "title": "15. Housefull 5 A",
         "year": "2025",
         "rating": "3.7"
     },
     {
-        "id": "tt10886166",
-        "title": "3. 365 dni",
-        "year": "2020",
-        "rating": "3.3"
-    },
-    {
-        "id": "tt34956433",
-        "title": "4. Airplane 2025",
+        "id": "tt32058735",
+        "title": "16. Bhool Chuk Maaf",
         "year": "2025",
-        "rating": "2.5"
+        "rating": "5.9"
     },
     {
-        "id": "tt20258920",
-        "title": "5. Tin Soldier",
+        "id": "tt26342662",
+        "title": "17. M3GAN 2.0",
         "year": "2025",
-        "rating": "3.4"
+        "rating": "5.1"
     },
     {
-        "id": "tt31712434",
-        "title": "6. Sikandar",
+        "id": "tt32194932",
+        "title": "18. The Ritual",
         "year": "2025",
-        "rating": "3.8"
+        "rating": "4.7"
     },
     {
-        "id": "tt34477893",
-        "title": "7. Morgan: Killer Doll",
+        "id": "tt21317634",
+        "title": "19. Bride Hard",
         "year": "2025",
-        "rating": "3.1"
+        "rating": "4.5"
     },
     {
-        "id": "tt12996154",
-        "title": "8. 365 Days: This Day",
-        "year": "2022",
-        "rating": "2.7"
-    },
-    {
-        "id": "tt28637027",
-        "title": "9. Into the Deep",
+        "id": "tt27714946",
+        "title": "20. The Monkey",
         "year": "2025",
-        "rating": "3.5"
+        "rating": "6.0"
     },
     {
-        "id": "tt0128165",
-        "title": "10. Blazin'",
-        "year": "2001",
-        "rating": "3.8"
-    },
-    {
-        "id": "tt31723358",
-        "title": "11. Pídeme lo que quieras",
+        "id": "tt30057084",
+        "title": "21. Babygirl",
         "year": "2024",
-        "rating": "3.9"
+        "rating": "5.8"
     },
     {
-        "id": "tt9603060",
-        "title": "12. Star Trek: Section 31",
-        "year": "2025",
-        "rating": "3.8"
-    },
-    {
-        "id": "tt30956852",
-        "title": "13. Popeye the Slayer Man",
-        "year": "2025",
-        "rating": "3.5"
-    },
-    {
-        "id": "tt6479178",
-        "title": "14. Picture of Beauty",
-        "year": "2017",
-        "rating": "3.5"
-    },
-    {
-        "id": "tt0118688",
-        "title": "15. Batman & Robin",
-        "year": "1997",
-        "rating": "3.8"
-    },
-    {
-        "id": "tt26597666",
-        "title": "16. Juliet & Romeo",
-        "year": "2025",
-        "rating": "3.6"
-    },
-    {
-        "id": "tt21106646",
-        "title": "17. The Next 365 Days",
-        "year": "2022",
-        "rating": "2.9"
-    },
-    {
-        "id": "tt29252358",
-        "title": "18. Armor",
+        "id": "tt16366836",
+        "title": "22. Venom: The Last Dance",
         "year": "2024",
-        "rating": "3.6"
+        "rating": "6.0"
     },
     {
-        "id": "tt0368226",
-        "title": "19. The Room",
-        "year": "2003",
-        "rating": "3.6"
-    },
-    {
-        "id": "tt33362807",
-        "title": "20. Popeye's Revenge",
+        "id": "tt26927452",
+        "title": "23. Hurry Up Tomorrow",
         "year": "2025",
-        "rating": "3.5"
+        "rating": "4.7"
     },
     {
-        "id": "tt24850708",
-        "title": "21. Gunslingers",
+        "id": "tt28443655",
+        "title": "24. Death of a Unicorn",
         "year": "2025",
-        "rating": "3.6"
+        "rating": "5.9"
     },
     {
-        "id": "tt31456973",
-        "title": "22. Alarum",
+        "id": "tt31433402",
+        "title": "25. Fear Street: Prom Queen",
         "year": "2025",
-        "rating": "3.3"
-    },
-    {
-        "id": "tt34037996",
-        "title": "23. Saunkan Saunkanay 2",
-        "year": "2025",
-        "rating": "4.0"
-    },
-    {
-        "id": "tt7032958",
-        "title": "24. Mashina lyubvi",
-        "year": "2016",
-        "rating": "3.7"
-    },
-    {
-        "id": "tt2724064",
-        "title": "25. Sharknado",
-        "year": "2013",
-        "rating": "3.3"
+        "rating": "5.1"
     }
 ]
-*/
+    */
