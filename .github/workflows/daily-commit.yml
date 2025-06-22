@@ -3,6 +3,7 @@ name: Daily Repository Update
 on:
   schedule:
     - cron: '15 1 * * *'  # Runs daily at 01:15 UTC
+  workflow_dispatch:      # Enables manual trigger from GitHub UI
 
 jobs:
   commit:
